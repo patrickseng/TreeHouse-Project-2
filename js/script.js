@@ -2,46 +2,35 @@
 
 
 const studentsItem = document.getElementsByClassName('student-item');
+const studentsPerPage = 10;
 
-const studentsPerPage = 10
-
+console.log(studentsItem);
 
 const showPage = (list, page) => {
   for ( i = 0; i < list.length ; i += 1){
-    if ( i >= ((page * (studentsPerPage)) - (studentsPerPage - 1)) && i <= (page * studentsPerPage))
+    if ( i >= ((page * (studentsPerPage)) - (studentsPerPage)) && i <= (page * studentsPerPage - 1))
       { list[i].style.display = "block" }
     else
       { list[i].style.display = "none"  }
   }
 }
+showPage(studentsItem, 1);
 
-
-console.log (showPage(studentsItem, 1));
-
-
-/*
-Loop over items in the list parameter
--- If the index of a list item is >= the index of the first
-item that should be shown on the page
--- && the list item index is <= the index of the last item
-that should be shown on the page, show it
-*/
-
-
-/*
-Loop over items in the list parameter
--- If the index of a list item is >= the index of the first
-item that should be shown on the page
--- && the list item index is <= the index of the last item
-that should be shown on the page, show it
-*/
-
-/***
-   Create the `appendPageLinks function` to generate, append, and add
-   functionality to the pagination buttons.
-***/
 
 const appendPageLinks = (list) => {
+      function numPages () {
+            return Math.ceil(list.length / studentsPerPage);
+          } ;
+      var div = document.createElement("div");
+        div.className += "pagination";
+        page.appendChild('div');
+        div.appendChild("ul");
+      for ( i = 0; i < list.length; i += 1) {
+          let li = document.createElement('li');
+          return ul.appendChild('li');
+        };
+
+
 /*
 1. Determine how many pages are needed for the list by dividing the
 total number of list items by the max number of items per page
@@ -55,5 +44,3 @@ call the showPage function to display the appropriate page
 clicked link using event.target
 */
 }
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
