@@ -1,10 +1,10 @@
 
 
-
+const ul = document.querySelector('.student-list');
 const studentsItem = document.getElementsByClassName('student-item');
 const studentsPerPage = 10;
+const pageClass = document.querySelector('.page');
 
-console.log(studentsItem);
 
 const showPage = (list, page) => {
   for ( i = 0; i < list.length ; i += 1){
@@ -14,21 +14,15 @@ const showPage = (list, page) => {
       { list[i].style.display = "none"  }
   }
 }
-showPage(studentsItem, 1);
-
 
 const appendPageLinks = (list) => {
-      function numPages () {
-            return Math.ceil(list.length / studentsPerPage);
-          } ;
+      let maxNumPages = Math.ceil(list.length / studentsPerPage);
       var div = document.createElement("div");
-        div.className += "pagination";
-        page.appendChild('div');
-        div.appendChild("ul");
-      for ( i = 0; i < list.length; i += 1) {
-          let li = document.createElement('li');
-          return ul.appendChild('li');
-        };
+        div.classList.add('pagination');
+        pageClass.appendChild(div);
+      const ul = document.createElement("ul");
+        pageClass.appendChild(ul);
+      };
 
 
 /*
