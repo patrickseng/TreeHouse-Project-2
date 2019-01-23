@@ -24,6 +24,15 @@ const appendPageLinks = (list) => {
         pageClass.appendChild(ul);
       };
 
+      for ( i = 0; i < maxNumPages; i += 1) {
+          let button = document.createElement('button');
+          let pageNumberText = document.createElement('pageNumberText');
+          button.appendChild('pageNumberText');
+          pageClass.appendChild('button');
+        };
+    }
+    appendPageLinks(studentsItem);
+
 
 /*
 1. Determine how many pages are needed for the list by dividing the
