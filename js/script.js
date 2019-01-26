@@ -1,9 +1,11 @@
 
+// Global Variables
 const studentsItem = document.getElementsByClassName('student-item');
 const studentsPerPage = 10;
 const pageClass = document.querySelector('.page');
 let page = 1
 
+// Show/hide the appropriate students
 
 const showPage = (list, page) => {
 
@@ -16,6 +18,7 @@ const showPage = (list, page) => {
 
   };
 
+//Create and append the pagination links
 
 const appendPageLinks = (list) => {
       const ul = document.createElement("ul");
@@ -38,17 +41,18 @@ const appendPageLinks = (list) => {
             ul.appendChild(li);
             };
 
+// Add functionality to pagination links with an event listener
           const pageButtons = document.querySelectorAll('a');
             pageButtons[0].className = 'active';
 
           ul.addEventListener('click', (e) => {
             if (e.target.tagName == 'A') {
             showPage(studentsItem, e.target.textContent);
-         }
+          }
 
           pageButtons[0].className += "remove";
-
-      });
+        }
+      );
 
    }
 
