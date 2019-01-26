@@ -42,8 +42,8 @@ const appendPageLinks = (list) => {
             };
 
 // Add functionality to pagination links with an event listener
-          const pageButtons = document.querySelectorAll('a');
-            pageButtons[0].className = 'active';
+       const pageButtons = document.querySelectorAll('a');
+            pageButtons.className = 'active';
 
           ul.addEventListener('click', (e) => {
             if (e.target.tagName == 'A') {
